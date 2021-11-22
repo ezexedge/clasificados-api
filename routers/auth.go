@@ -15,9 +15,9 @@ import (
 
 func Signup(w http.ResponseWriter, r *http.Request) {
 
-	var t models.UsuariosRegistro
+	var t models.Usuario
 
-	usuario := &models.UsuariosRegistro{}
+	usuario := &models.Usuario{}
 
 	reqBody, err := ioutil.ReadAll(r.Body)
 
@@ -52,11 +52,9 @@ func Signup(w http.ResponseWriter, r *http.Request) {
 
 func Signin(w http.ResponseWriter, r *http.Request) {
 
-	w.Header().Set("context-type", "application/json")
-
 	var t models.UsuarioLogin
 
-	usuario := &models.UsuariosRegistro{}
+	usuario := &models.Usuario{}
 
 	err := json.NewDecoder(r.Body).Decode(&t)
 	if err != nil {

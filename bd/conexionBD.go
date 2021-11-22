@@ -20,7 +20,7 @@ func ConectarBD() int {
 
 	DB = connection
 
-	connection.AutoMigrate(&models.UsuariosRegistro{})
+	connection.AutoMigrate(&models.Usuario{})
 
 	fmt.Println("conexion exitosa")
 	return 1

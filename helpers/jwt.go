@@ -7,7 +7,7 @@ import (
 	"github.com/ezexedge/clasificados-2/models"
 )
 
-func GeneroJWT(t models.UsuariosRegistro) (string, error) {
+func GeneroJWT(t models.Usuario) (string, error) {
 
 	miClave := []byte("MastersdelDesarrollo_grupodeFacebook")
 

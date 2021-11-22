@@ -16,6 +16,8 @@ func Manejadores() {
 	router.HandleFunc("/registro", routers.Signup).Methods("POST")
 	router.HandleFunc("/login", routers.Signin).Methods("POST")
 
+	router.HandleFunc("/perfil", routers.VerPefil).Methods("GET")
+
 	//falta inicio de sesion
 	//inicio de sesion es imposible como si fuese nodejs
 	//iniciar sesesion desde front y verifycar el token
